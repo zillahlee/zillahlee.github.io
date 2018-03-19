@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		<title>Zhen's Markup Exercise 7: Curriculum Vitae</title>
+		<meta charset="UTF-8">
+		
+		<link href="Reset.css" rel="stylesheet" type="text/css"/>
+		<link href="ZhenLi_CV.css" rel="stylesheet" type="text/css"/>
+		<link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand"
+			  rel="stylesheet"/>
+		<!--HTML validator says the "|" in the google fonts url is an illegal character,
+			but even when i changed it into "&verbar;", the validator still says the same thing.
+			I showed this to Prof. Julien, and he told me it's not a problem.-->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				// default: view first "page" only
+				$(".content.edu").siblings().hide();
+				
+				// swap avatar
+				$("#avatar").click(function () {
+					$(this).attr("src", function(index, currentSource) {
+						return currentSource == "image/portrait.jpg" ? "image/avatar.jpg" : "image/portrait.jpg";
+					});
+				});
+				
+				// simulated pages (i finally made it (after JS looping & lengthy jQ)! yay~)
+				$("#nav li").click(function () {
+					$(this).css("text-shadow", "1px 1px 4px #444");
+					$(this).siblings().css("text-shadow", "none");
+					var selectedClass = $(this).attr("class");
+					var targetClass = ".content." + selectedClass;
+					$(targetClass).siblings().slideUp(1500);
+					$(targetClass).slideDown(1500);
+				});
+				
+				// some silly experiment LOL
+				$("#content").click(function(event){
+					$("<img>")
+						.attr("src", "image/usb.png")
+						.width(70)
+						.css("position", "absolute")
+						.css("top", event.pageY-35+"px")
+						.css("left", event.pageX-35+"px")
+						.appendTo("body")
+						.animate({top: "0", opacity: "0"}, 4000); //.fadeOut(4000);
+				});
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		
+		<div id="sidebar">
+			<img id="avatar" src="image/avatar.jpg"
+				 alt="avatar" title="Je m'appele [dʒen] (*╹▽╹*)"/><br/>
+			
+			<div id="hcard-Zhen-Li" class="vcard">
+				<span class="fn" title="Je m'appele [dʒen] (*╹▽╹*)">Zhen Li</span>
+				<div class="tel">(438) 928-0111</div>
+				<a class="email" href="mailto:zhen.li3@mail.mcgill.ca">zhen.li3@mail.mcgill.ca</a>
+				<div class="adr">
+					<div class="street-address">60 Ave des Pins Ouest</div>
+					<span class="locality">Montréal</span>,
+					<span class="region">Québec</span><br/>
+					<span class="postal-code">H2W 1R2</span>
+				</div><!-- adr -->
+			</div><!-- hCard -->
+			
+			<img id="logo" src="image/logo.png"
+				 alt="logo" title="meow~"/>
+			
+			<ul id="nav">
+				<li class="edu">Education</li>
+				<li class="work">Work</li>
+				<li class="expert">Expertise</li>
+				<li class="inv">Involvement</li>
+				<li class="hobby">Hobbies</li>
+			</ul>
+		</div><!-- nav-->
+		
+		<div id="content">
+			
+			<div class="content edu">
+				<h1>Education</h1>
+				<div class="tbox">
+					
+					<h2><a href="https://www.mcgill.ca/" target="_blank">
+					McGill University</a></h2>
+					<h3>2017~2019</h3>
+					<h4>Master of Information Studies (MISt)</h4>
+					<p><em>Courses Completed</em></p>
+					<ul>
+						<li>Foundation of Information Studies</li>
+						<li>Organization of Information</li>
+						<li>Information System Design</li>
+						<li>Information Behavior & Resources</li>
+					</ul>
+					<br/>
+					<p><em>Courses in Progress</em></p>
+					<ul>
+						<li>Data Mining</li>
+						<li>Web System Design & Management</li>
+						<li>Database Design & Management</li>
+						<li>Knowledge Management</li>
+					</ul>					
+					<br/><br/><br/>
+					
+					<h2><a href="http://www.cjlu.edu.cn" target="_blank">
+					China Jiliang University</a></h2>
+					<h3>2010~2014</h3>
+					<h4>Bachelor of Arts in English (BA)</h4>
+					<p>Specialization：Communication & English-Chinese Interpreting</p>
+					<ul>
+						<li>Zhejiang Province Honors Graduate</li>
+						<li>China Jiliang University Honors Graduate</li>
+					</ul>
+				</div><!-- tbox -->
+			</div><!-- edu -->
+			
+			<div class="content work">
+				<h1>Work</h1>
+				<div class="tbox">
+					
+					<h2><a href="http://www.neworiental.org/english/" target="_blank">
+					New Oriental Edu & Tech Group</a></h2>
+					<h3>2014~2017</h3>
+					<h4>Education Consultant</h4>
+					<ul>
+						<li>Provided advice concerning academic career planning,
+								language learning, university and high school matches and applications,
+								visa applications, etc.</li>
+						<li>Information collection & management (both clients’ & education
+								institutions’ information), communication (with 100+ clients,
+								target institutions, colleagues and superiors), and paperwork</li>
+						<li>Won Senior Consultant title in Sept 2016 (20 winners among 150+
+								candidates from branch companies all over the country);</li>
+						<li>Occasionally gave lectures on higher education
+								and student life overseas</li>
+					</ul>
+					<br/><br/><br/>
+					
+					<h2>Wenxin Press</h2>
+					<h3>2013</h3>
+					<h4>Assistant Editor (Summer Intern)</h4>
+					<ul>
+						<li>Selected & revised contributed articles, commented in writing contest</li>
+						<li>Proofread, sorted & input documents</li>
+					</ul>
+					<br/><br/><br/>
+					
+					<h2>Private Tutor</h2>
+					<h3>2013</h3>
+					<h4>Self-Employed Part-Time Job</h4>
+					<ul>
+						<li>Tutored individual students College English</li>
+						<li>Taught secondary-school English, Math, & Chinese</li>
+					</ul>
+					
+					<!-- just selected work exp -->
+					
+				</div><!-- tbox -->
+			</div><!-- work -->
+			
+			<div class="content expert">
+				<h1>Expertise</h1>
+				<div class="tbox">
+					
+					<h2>Human Languages</h2>
+					<ul>
+						<li><em>Mandarin</em> (native)</li>
+						<li><em>English</em> (advanced)</li>
+						<li><em>Chinese-English Translation & Interpreting</em></li>
+						<li><em>French</em> (basic, learn-ing)</li>
+					</ul>
+					<br/><br/><br/>
+					
+					<h2>Computer Literacy</h2>
+					<ul>
+						<li><em>HTML, CSS, JavaScript</em> (see I made this "site" from scratch~!)</li>
+						<li><em>SQL</em> (completed a Stanford CS major online course with full marks)</li>
+						<li><em>Data Mining & OLAP</em> (just the basics ;p)</li>
+						<li><em>MS Office Suite</em> (Word, Excel, PowerPoint, Access)</li>
+						<li><em>Adobe Acrobat</em> (a bit PS as well)</li>
+						<li><em>Internet</em> (most that u can think of,
+								if I don't know yet, I can always learn super fast~)</li>
+					</ul>
+					
+				</div><!-- tbox -->
+			</div><!-- expertise -->
+			
+			<div class="content inv">
+				<h1>Involvement</h1>
+				<div class="tbox">
+					
+					<h2>Volunteering</h2>
+					<h3>2007~now</h3>
+					<h4>All Sorts of Community & On-Campus Volunteering</h4>
+					<ul>
+						<li>Pardon my lousy memory~</li>
+						<li>All I remember is that helping people out feels great!</li>
+					</ul>
+					<br/><br/><br/>
+					
+					<h2>Leadership on Campus</h2>
+					<h3>2011~2012</h3>
+					<h4>Head of Student Publicity Department</h4>
+					<p>College of Foreign Languages @ China Jiliang University</p>
+					<ul>
+						<li>Presided over departmental conferences,
+								recruited members, organized group activities</li>
+						<li>Planned university galas, designed posters,
+								videos, stage decorations, sound & lighting</li>
+					</ul>
+					
+				</div><!-- tbox -->
+			</div><!-- inv -->
+			
+			<div class="content hobby">
+				<h1>Hobbies</h1>
+				<div class="tbox">
+					
+					<h2>Music</h2>
+					<ul>
+						<li>Folk, Alternative, Britpop, Blues, Jazz,
+							Dreampop, Psychedelic, Indie...</li>
+						<li>Don't make me list my favorite bands/artists lol!</li>
+					</ul>
+					<br/><br/>
+					
+					<h2>Visual Arts</h2>
+					<ul>
+						<li>Drawing</li>
+						<li>Design</li>
+						<li>Photography</li>
+					</ul>
+					<br/><br/>
+					
+					<h2>Reading</h2>
+					<ul>
+						<li>Fictions & Non-Fictions</li>
+						<li>English & Chinese</li>
+						<li>you name it!</li>
+					</ul>
+					<br/><br/>
+					
+					<h2>TV & Movie & Anime</h2>
+					<ul>
+						<li>Favorite TV: House MD, 6 Feet Under, Boardwalk Empire,
+								Black Books, Doctor Who, Shameless, ...</li>
+						<li>Favorite Anime/Cartoon: Ghost in the Shell, Futurama,
+							Daria, BoJack Horseman...</li>
+						<li>Favorite Movies: simply tooooooooo many!</li>
+					</ul>
+					<br/><br/>
+					
+					<h2>Jogging</h2>
+					<ul>
+						<li>(｡•́︿•̀｡) oh, it's been a LONG LONG break (╥╯^╰╥)</li>
+					</ul>
+					
+				</div><!-- tbox -->
+			</div><!-- hobby -->
+			
+		</div><!-- content -->
+		
+		<div id="footer">
+			<em>&copy; 2018 Zhen Li</em><br/>
+			Assignment for GLIS 634 @ Mcgill University<br/>
+			The "pages" you see are artifitial, so this "site" may be printer-unfriendly.<br/>
+			Feel free to contact me for a printable CV !<br/>^ω^
+		</div><!-- footer -->
+		
+		
+	</body>
+	
+</html>
