@@ -4,7 +4,7 @@ body {
 	font-family: "Quicksand", "Microsoft YaHei", sans-serif;
 	color: rgba(25,25,25,0.9);
 	line-height: 1.7em;
-	background-image: url("image/bg.png");
+	background-image: url("../image/bg.png");
 	background-attachment: fixed;
 	background-color: white;
 }
@@ -125,7 +125,7 @@ h1 {
 .tbox {
 	margin: 2%;
 	border: 0.5em solid transparent;
-	border-image: url("image/border.png") 50 0 round;
+	border-image: url("../image/border.png") 50 0 round;
 	padding: 5% 1%;
 }
 
