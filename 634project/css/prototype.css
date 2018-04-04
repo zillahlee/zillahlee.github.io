@@ -9,6 +9,14 @@ body {
 		color: rgba(25,25,25);
 }
 
+#wrapper {
+		width: 90%;
+		min-width: 960px;
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
 header, #footer {
 		background-color: #EAEAEA;
 }
@@ -21,14 +29,6 @@ a:link, a:visited, header a:link, header a:visited, #footer a:link, #footer a:vi
 #leftsidebar img:hover, #leftsidebar div:hover, #tab li:hover, .mb:hover, #foot2 p:hover, #searchbutton:hover {
 		opacity: 0.7;
 		filter: alpha(opacity=70);
-}
-
-#wrapper {
-		width: 90%;
-		min-width: 960px;
-		max-width: 1920px;
-		margin-left: auto;
-		margin-right: auto;
 }
 
 h1, h2, h3 {
@@ -418,7 +418,7 @@ nav li li.dropdown > a {
 -------------------------------------------------------------- */
 
 #footer {
-		height: 15em;
+		height: 12em;
 		width: 96%;
 		padding: 2% 2% 3% 2%;
 		clear: both;
