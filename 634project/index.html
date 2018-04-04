@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<!-- title and meta -->
+		<meta charset="utf-8" />
+		<title>McMaster University Library</title>
+		<meta name="description" content="Redesign of McMaster University Library Website"/>
+			
+		<!-- css -->
+		<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans">
+		<link rel="stylesheet" href="css/prototype.css" type="text/css"/>
+		
+		<!-- js -->
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/dropdown.js"></script>
+		<script src="js/tabs.js"></script>
+
+	</head>
+
+	<body>
+
+	<div id="wrapper">
+
+		<header>
+			<div id="title" class="content">
+				<img id="logo" src="img/logo.png">
+			
+				<div id="toptitle">
+					<h1>McMaster University</h1>
+					<h1>Library</h1>
+				</div>
+			
+				<div id="topright">
+					<p><a href="">Mosiac</a> | <a href="">Directory</a> | <a href="">IT Services</a></p>
+					<p>
+						<form action="">
+							<input id="searchweb" type="text" placeholder="Search website..." name="search">
+							<input id="lens" type="image" src="img/lens.png" alt="Submit">
+						</form>
+					</p>
+					<p id="faq"><a href="">FAQ</a></p>
+				</div>
+			</div><!-- end of title-->		
+		</header>
+
+		<nav>
+			<ul class="content clearfix">
+				<li id="home"><a href="#"><img id="homebutton" src="img/homebutton.png"></a></li>
+				
+				<li class="dropdown">
+				<a href="#">Collections</a>
+					<ul class="sub-menu">
+						<li><a href="#">Archives &amp; Research Collection</a></li>
+						<li><a href="#">Data &amp; Statistics</a></li>
+						<li><a href="#">Digital Archive</a></li>
+						<li><a href="#">Digital Collections</a></li>
+						<li><a href="#">MacSphere</a></li>
+						<li><a href="#">Government Publications</a></li>
+						<li><a href="#">History of Health &amp; Medicine</a></li>
+						<li><a href="#">Lyons New Media Centre</a></li>
+						<li><a href="#">Maps/GIS</a></li>
+						<li><a href="#">Music</a></li>
+						<li><a href="#">Theses</a></li>
+					</ul>
+				</li>
+				
+				
+				<li class="dropdown">
+				<a href="#">Use the Libraries</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+						<a href="#">Services</a>
+							<ul class="sub-menu">
+								<li><a href="#">Borrowing</a></li>
+								<li><a href="#">How to Find</a></li>
+								<li><a href="#">Video Tutorial</a></li>
+								<li><a href="#">Learning Support</a></li>
+								<li><a href="#">Data Analysis Support</a></li>
+								<li><a href="#">Suggest New Items</a></li>
+								<li><a href="#">Off-Campus Access</a></li>
+								<li><a href="#">Library Services</a></li>
+								<li><a href="#">Request Forms</a></li>
+							</ul>
+						</li>
+						
+						<li class="dropdown">
+						<a href="#">Facitilites</a>
+							<ul class="sub-menu">
+								<li><a href="#">Hours</a></li>
+								<li><a href="#">Equipment</a></li>
+								<li><a href="#">Floor Plans</a></li>
+								<li><a href="#">Study Areas</a></li>
+								<li><a href="#">Thode Makerspace</a></li>	
+							</ul>
+						</li>
+					</ul>
+				</li>
+						
+						
+				<li class="dropdown">
+					<a href="#">Research</a> 
+					<ul class="sub-menu">
+						<li><a href="#">Catalogue</a></li>
+						<li><a href="#">Database</a></li>
+						<li><a href="#">e-Journals</a></li>
+						<li><a href="#">Course Reserves</a></li>
+						<li><a href="#">Interlibrary Loan</a></li>
+						<li><a href="#">Subject &amp; Course Guide</a></li>
+						<li><a href="#">Research Guide</a></li>
+						<li><a href="#">Citation &amp; Style Guide</a></li>
+						<li><a href="#">Open Access</a></li>
+						<li><a href="#">Research Data Management</a></li>
+						<li><a href="#">Sherman Center for Digital Scholarship</a></li>
+						<li><a href="#">Research Help</a></li>
+					</ul>
+				</li>
+				
+				<li class="dropdown">
+					<a href="#">Teaching</a>
+					<ul class="sub-menu">
+						<li><a href="#">Classroom Technologies</a></li>
+						<li><a href="#">Book Media Materials</a></li>
+						<li><a href="#">Create Course Reserves</a></li>
+						<li><a href="#">Link to e-Resources</a></li>
+						<li><a href="#">Request Information Literacy Help</a></li>
+						<li><a href="#">2.0 Teaching Toolbox</a></li>
+					</ul>
+				</li>
+				
+				<li class="dropdown">
+					<a href="#">About</a>
+					<ul class="sub-menu">
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Support Us</a></li>
+						<li><a href="#">News &amp; Events</a></li>
+					</ul>						
+				</li>
+			</ul>
+		</nav>
+
+		<div id="main">
+			
+			<div id="leftsidebar">				
+				<p><img src="img/ask.png"></p>
+				<p><img src="img/login.png"></p>
+				<p><img src="img/book.png"></p>
+				<p><img src="img/access.png"></p>
+				
+				<div id="feature">
+					<p>How Library Stuff Works</p>
+					<p>Vedio Tutorial</p>
+				</div>
+				
+				<div class="leftsidebar-box">
+					<p>RESPECT Campaign</p>
+				</div>
+				
+				<div class="leftsidebar-box">
+					<p>Feedback</p>
+				</div>
+				
+				<div class="leftsidebar-box">
+					<p>Health Sciences Library</p>
+				</div>
+			</div>
+				
+			<div id="middlecontent">
+				
+				<div id="tab">
+					<ul class='tabs'>
+						<li><a href='#tab1'>Quick Search</a></li>
+						<li><a href='#tab2'>Catalogue</a></li>
+						<li><a href='#tab3'>Databases</a></li>
+						<li><a href='#tab4'>e-Journals</a></li>
+					</ul>
+					
+					<!-- tab content -->
+					<div id='tab1'>
+						<div id="mainsearch">
+							<form>
+								<input id="searchlib" type="text" placeholder="Find books, articles, videos, and more... " name="search">
+								<button id="searchbutton" type="submit">Search</button>
+							</form>
+						</div>
+						<p id="searchlink1"><a href="">Advane Search</a></p>
+						<p id="searchlink2"><a href="">Classic Search</a></p>
+						<p id="searchlink2"><a href="">Search Tips</a></p>
+					</div>
+					
+					<div id='tab2'>
+						<p>search box for catalogue</p>
+					</div>
+					
+					<div id='tab3'>
+						<p>search box for databases</p>
+					</div>
+					
+					<div id='tab4'>
+						<p>search box for e-journals</p>
+					</div>
+					<!-- end of tab content -->
+					
+				</div><!-- end of tab -->
+				
+				<div id="middlebottom">
+					<h1>Subjects &amp; Course Guides</h1>
+					
+					<div class="mb mbl">
+						<p>Business</p>
+					</div>
+					
+					<div class="mb mbr">
+						<p >Engineering</p>
+					</div>
+					
+					<div class="mb mbl">
+						<p>Humanities</p>
+					</div>
+					
+					<div class="mb mbr">
+						<p>Science</p>
+					</div>
+					
+					<div class="mb mbl">
+						<p>Social Science</p>
+					</div>
+					
+					<div class="mb mbr">
+						<p>Find a Guide</p>
+					</div>
+				
+				</div><!-- end of middle bottom-->
+			</div><!--end of middle content -->
+				
+			
+			
+			<div id="rightsidebar">
+				<div id="hours">
+					<h3>Hours for Mar. 30</h3>
+					<p>Mills Library: 7am-6pm</p>
+					<p>Innis Library: 9am-5pm</p>
+					<p>Thode Library: Closed</p>
+					<p>Ask Services: Closed</p>
+					<p id="hours-more"><a herf="">More Hours &amp; Alert ...</a></p>
+				</div>
+				
+				<div id="news">
+					<h3>News &amp; Event</h3>
+					
+					<div class="newsevent1">
+						<p>April</br>1th</p>
+					</div>
+					
+					<div class="newsevent2">
+						<p>Pellentesque habitant morbi tristique senectus et. </p>
+					</div>
+					 
+					<div class="newsevent1">
+						<p>April</br>1th</p>
+					</div>
+				
+					<div class="newsevent2">
+						<p>In posuere felis nec tortor. </p>
+					</div>
+					 
+					<div class="newsevent1">
+						<p>April</br>1th</p>
+					</div>
+					
+					<div class="newsevent2">
+						<p>Donec dictum lectus non odio.</p>
+					</div>
+						 
+					<div class="newsevent1">
+						<p>March</br>30th</p>
+					</div>
+					
+					<div class="newsevent2">
+						<p>Mauris vel lacus vitae felis vestibulum volutpat. </p>
+					</div>
+					 
+					<div class="newsevent1">
+						<p>March</br>28th</p>
+					</div>
+						
+					<div class="newsevent2">
+						<p>Suspendisse quam leo, molestie sed.</p>
+					</div>
+				
+					<p id="news-more"><a href="">More News &amp; Events ...</a></p>
+						 
+				</div><!-- end of news -->
+			</div><!-- end of right sidebar -->
+			
+		</div><!-- end of main -->
+	
+		
+		<div id="footer">
+			<img id="footlogo" src="img/tag.png">
+			
+			<div id="foot1">
+				<h2>Contact Us</h2>
+				<img src="img/facebook.png">
+				<img src="img/twitter.png">
+				<img src="img/instagram.png">
+				<img src="img/googleplus.png">
+				<img src="img/youtube.png">
+				<p>McMaster University Library</p>
+				<p>Add: 1280 Main St W, Hamilton, ON L8S 4L8</p>
+				<p>Tel: 905-525-9140</p>
+				<p>E-mail: <a href="mailto">library@mcmaster.ca</a></p>
+			</div>
+			
+			<div id="foot2">
+					<p>Support Us</p>
+					<p>About Us</p>
+					<p>Help</p>
+			</div>
+		
+			<div id="foot3">
+				<p><a href="">Terms of Use &amp; Privacy Policy</a></p>
+				<p><a href="">Admin Login</a></p>
+				<p>Copyright © 2018 McMaster University</p>
+			</div>
+	
+		</div><!-- end of footer-->
+	
+	</div><!-- end of wrapper -->
+	
+	</body>
+	
+</html>
